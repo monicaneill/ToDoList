@@ -17,7 +17,7 @@ public class ToDoListItemTests
         toDoObject.ItemToDo = "Wipe counters";
 
         //Assert
-        Assert.Equal("Wipe counters", todoObject.ItemToDo);
+        Assert.Equal("Wipe counters", toDoObject.ItemToDo);
     }
 
     [Fact]
