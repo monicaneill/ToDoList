@@ -11,26 +11,26 @@ public class ToDoListItemTests
     public void ItemToDo_CanBeAltered()
     {
         //Arrange
-        var todoObject = ToDoListDataBuilder.CreateToDoList(1, "Go for run", false);
+        var toDoObject = ToDoListDataBuilder.CreateToDoList(1, "Go for run", false);
 
         //Act
-        todoObject.ItemToDo = "Wipe counters";
+        toDoObject.ItemToDo = "Wipe counters";
 
         //Assert
-        Assert.Equal("Wipe counters", todoObject.ItemToDo);
+        Assert.Equal("Wipe counters", toDoObject.ItemToDo);
     }
 
     [Fact]
     public void Completed_CanBeChanged()
     {
         //Arrange
-        var todoObject = ToDoListDataBuilder.CreateToDoList(1, "Wipe counters", false);
+        var toDoObject = ToDoListDataBuilder.CreateToDoList(1, "Wipe counters", false);
 
         //Act
-        todoObject.Completed = true;
+        toDoObject.Completed = true;
 
         //Assert
-        Assert.True(todoObject.Completed);
+        Assert.True(toDoObject.Completed);
     }
 
     [Theory]

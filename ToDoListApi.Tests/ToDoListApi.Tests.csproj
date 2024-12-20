@@ -26,7 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TodoList.WebApi\ToDoList.WebApi.csproj" />
+    <ProjectReference Include="..\ToDoList.WebApi\ToDoList.WebApi.csproj" />
   </ItemGroup>
 
 </Project>
