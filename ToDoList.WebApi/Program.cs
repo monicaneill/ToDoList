@@ -19,7 +19,19 @@ builder.Services.AddSwaggerGen(c =>
         $"{Assembly.GetExecutingAssembly().GetName().Name}.xml"));
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", builder =>
+    {
+        builder.WithOrigins("http://localhost:50863") //needs to match React dev url TODO - see if can make it so don't need to hardcode url
+               .AllowAnyHeader()
+               .AllowAnyMethod();
+    });
+});
+
 var app = builder.Build();
+
+app.UseCors("AllowFrontend"); //note to self - THIS MUST BE CALLED BEFORE USEAUTHORIZATION
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

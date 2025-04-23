@@ -58,7 +58,6 @@
     <Folder Include="Properties" />
     <Folder Include="dbo" />
     <Folder Include="dbo\Tables" />
-    <Folder Include="PublishLocations" />
     <Folder Include="dbo\StoredProcs" />
   </ItemGroup>
   <ItemGroup>
@@ -71,9 +70,9 @@
     <Build Include="dbo\StoredProcs\spToDo_Update.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="PublishLocations\LocalToDoListDB.publish.publish.xml" />
+    <PostDeploy Include="Script.PostDeployment.sql" />
   </ItemGroup>
   <ItemGroup>
-    <PostDeploy Include="Script.PostDeployment.sql" />
+    <None Include="SQLProject.publish.xml" />
   </ItemGroup>
 </Project>
